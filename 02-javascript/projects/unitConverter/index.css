@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  background-color: #202020;
+  text-align: center;
+  display: flex;
+  font-family: sans-serif;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* centers both boxes as a group */
+  min-height: 100vh;
+}
+
+#title {
+  color: #ffffff;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+#mainBox {
+  background-color: #6943ff;
+  font-family: sans-serif;
+  height: 320px;
+  padding: 10px 40px;
+}
+
+#num-input {
+  color: white;
+  background-color: white;
+  border: 2px solid #ccc1ff;
+  background-color: #6943ff;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-weight: bold;
+  width: 140px;
+  height: 90px;
+  font-size: 34px;
+  text-align: center;
+}
+
+#convert-btn {
+  background-color: white;
+  color: black;
+  margin-top: 30px;
+  margin-bottom: none;
+  padding: 18px 26px;
+  border: none;
+  border-radius: 5px;
+  width: 140px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease; /*smooth animation */
+}
+
+#convert-btn:hover {
+  background-color: #ccc1ff; /* light purple hover */
+  color: white;
+  transform: scale(1.05); /* slightly enlarge */
+}
+
+#subBox {
+  background-color: #1f2937;
+  height: 350px;
+  width: 563px;
+}
+.varBoxes {
+  background-color: #273549;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80px;
+  border-radius: 4px;
+}
+
+h3 {
+  color: #ccc1ff;
+  padding-top: 10px;
+}
+
+.result-text {
+  color: white;
+  font-size: 11px;
+}
+
+#varBox1 {
+  margin-top: 37px;
+}

@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  text-align: center;
+}
+
+.hero {
+  background-image: url("images/temple-bar.jpg");
+  background-size: cover;
+  height: 720px;
+  width: auto;
+}
+
+img {
+  width: 100px;
+}
