@@ -92,3 +92,28 @@ span {
   color: gray;
   font-weight: 400;
 }
+
+.portraitVanGogh {
+  position: relative;
+  display: inline-block; /* keeps the button aligned with the image */
+}
+
+.portraitVanGogh img {
+  width: 100%;
+  display: block;
+}
+
+.forwardButton {
+  width: 35px;
+  position: absolute;
+  top: 550px; /* distance from top of portrait */
+  right: 10px; /* distance from right edge of portrait */
+  cursor: pointer;
+  opacity: 0.3; /* 👈 makes it faded when idle */
+  transition: opacity 0.3s ease, transform 0.2s ease; /* smooth fade & hover animation */
+}
+
+.forwardButton:hover {
+  opacity: 1; /* 👈 fully visible when hovered */
+  transform: scale(1.1); /* optional subtle zoom-in effect */
+}
