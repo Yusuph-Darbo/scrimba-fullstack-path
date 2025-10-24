@@ -125,7 +125,6 @@ span {
   /* Flipping the button */
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  /* visibility: hidden; */
 }
 
 .forwardButton:hover,
