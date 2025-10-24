@@ -17,7 +17,14 @@ body {
 
 .logo {
   display: flex;
-  width: 150px;
+  width: 230px;
+  margin-left: 20px;
+}
+
+.spiderman {
+  width: 100px;
+  border-radius: 50%;
+  text-align: end;
 }
 
 .br {
@@ -35,4 +42,27 @@ body {
 h1,
 p {
   display: inline;
+}
+
+.icons {
+  display: flex;
+  margin-top: 20px;
+  justify-content: left;
+  margin-left: 20px;
+}
+
+.heart-icon,
+.comment-icon,
+.dm-icon {
+  height: 60px;
+  margin-right: 20px;
+}
+
+h2 {
+  text-align: left;
+  margin-left: 20px;
+}
+
+span {
+  font-weight: 300;
 }
