@@ -9,6 +9,16 @@ body {
   text-align: center;
 }
 
+.boxSize {
+  width: 90vw; /* responsive width */
+  max-width: 500px; /* caps width on larger screens */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 .container {
   display: flex;
   flex-direction: column;
