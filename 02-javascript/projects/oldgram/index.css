@@ -10,11 +10,29 @@ body {
 }
 
 .container {
-  /* display: flex;
-  flex-direction: column; */
-  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
 }
 
 .logo {
-  height: 50px;
+  display: flex;
+  width: 150px;
+}
+
+.br {
+  border-bottom: 1px solid #c6c6c6;
+  margin: 20px 0;
+}
+
+.vincent-pfp {
+  width: 60px;
+  border-radius: 50px;
+  margin-left: 20px;
+  border: 1px solid black;
+}
+
+h1,
+p {
+  display: inline;
 }
