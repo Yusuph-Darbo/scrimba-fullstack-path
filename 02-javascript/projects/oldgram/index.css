@@ -18,13 +18,20 @@ body {
 .logo {
   display: flex;
   width: 230px;
-  margin-left: 20px;
 }
 
 .spiderman {
-  width: 100px;
+  width: 70px;
   border-radius: 50%;
-  text-align: end;
+  margin-right: 20px;
+  border: 1px solid purple;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px;
 }
 
 .br {
@@ -37,11 +44,6 @@ body {
   border-radius: 50px;
   margin-left: 20px;
   border: 1px solid black;
-}
-
-h1,
-p {
-  display: inline;
 }
 
 .icons {
@@ -65,4 +67,28 @@ h2 {
 
 span {
   font-weight: 300;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin: 10px 20px;
+  text-align: left;
+  margin-bottom: 17px;
+}
+
+.profile-info {
+  margin-left: 10px;
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.profile-info p {
+  margin: 0;
+  font-size: 14px;
+  color: gray;
+  font-weight: 400;
 }
