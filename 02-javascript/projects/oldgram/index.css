@@ -6,8 +6,11 @@ body {
 
 body {
   font-family: "Source Sans 3", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
   text-align: center;
-  background-color: rgb(180, 178, 178);
 }
 
 .boxSize {
@@ -18,6 +21,11 @@ body {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.portrait-wrapper {
+  position: relative;
+  width: 100%;
 }
 
 .container {
@@ -105,6 +113,8 @@ span {
 }
 
 .portrait {
+  width: 100%;
+  height: 525px;
   position: relative;
   display: inline-block; /* keeps the button aligned with the image */
 }
