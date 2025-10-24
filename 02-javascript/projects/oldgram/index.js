@@ -28,3 +28,6 @@ const posts = [
     }
 ]
 
+let pageNumber = 1;
+const forwardButton = document.querySelector(".forwardButton");
+

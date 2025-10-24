@@ -39,7 +39,7 @@ body {
   margin: 20px 0;
 }
 
-.vincent-pfp {
+.artist-pfp {
   width: 60px;
   border-radius: 50px;
   margin-left: 20px;
@@ -93,27 +93,43 @@ span {
   font-weight: 400;
 }
 
-.portraitVanGogh {
+.portrait {
   position: relative;
   display: inline-block; /* keeps the button aligned with the image */
 }
 
-.portraitVanGogh img {
+.portrait img {
   width: 100%;
   display: block;
 }
 
-.forwardButton {
+.forwardButton,
+.rewindButton {
   width: 35px;
   position: absolute;
-  top: 550px; /* distance from top of portrait */
-  right: 10px; /* distance from right edge of portrait */
+  top: 550px;
+  right: 10px;
   cursor: pointer;
-  opacity: 0.3; /* 👈 makes it faded when idle */
+  opacity: 0.3;
   transition: opacity 0.3s ease, transform 0.2s ease; /* smooth fade & hover animation */
 }
 
-.forwardButton:hover {
-  opacity: 1; /* 👈 fully visible when hovered */
+.forwardButton {
+  top: 550px;
+  right: 10px;
+}
+
+.rewindButton {
+  top: 550px;
+  left: 10px;
+  /* Flipping the button */
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  /* visibility: hidden; */
+}
+
+.forwardButton:hover,
+.forwardButton:active {
+  opacity: 1; /* fully visible when hovered */
   transform: scale(1.1); /* optional subtle zoom-in effect */
 }
