@@ -6,4 +6,15 @@ body {
 
 body {
   font-family: "Source Sans 3", sans-serif;
+  text-align: center;
+}
+
+.container {
+  /* display: flex;
+  flex-direction: column; */
+  background-color: grey;
+}
+
+.logo {
+  height: 50px;
 }
