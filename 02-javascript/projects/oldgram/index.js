@@ -1,5 +1,7 @@
+// Array of objects
 const posts = [
   {
+    // Attributes of object
     name: "Vincent van Gogh",
     username: "vincey1853",
     location: "Zundert, Netherlands",
