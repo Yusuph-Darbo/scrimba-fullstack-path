@@ -140,11 +140,12 @@ span {
 
 .rewindButton {
   left: 2%;
-  transform: translateY(-50%) scaleX(-1); /* flip horizontally */
 }
 
 .forwardButton:hover,
-.forwardButton:active {
+.forwardButton:active,
+.rewindButton:hover,
+.rewindButton:active {
   opacity: 1; /* fully visible when hovered */
   transform: scale(1.1); /* optional subtle zoom-in effect */
 }
