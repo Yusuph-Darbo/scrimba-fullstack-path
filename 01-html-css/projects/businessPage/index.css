@@ -68,6 +68,12 @@ button {
   cursor: pointer;
 }
 
+button:hover,
+button:active {
+  opacity: 0.9;
+  transition: 0.3s ease;
+}
+
 .img-banner {
   position: absolute;
   top: 0;
