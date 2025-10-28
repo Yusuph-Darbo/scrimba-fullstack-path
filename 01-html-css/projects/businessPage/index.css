@@ -67,3 +67,12 @@ button {
   font-weight: 700;
   cursor: pointer;
 }
+
+.img-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #cd6858;
+  color: whitesmoke;
+  padding: 10px;
+}
