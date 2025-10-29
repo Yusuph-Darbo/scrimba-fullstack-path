@@ -33,3 +33,37 @@ h3 {
 header {
   background-color: #67595e;
 }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 370px;
+  gap: 15px;
+  padding: 10px 0 0;
+}
+
+.pumpkin-img {
+  width: 80px;
+}
+
+.control-container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 0px auto;
+}
+
+.emotion-radios {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #bcbcbc;
+  border: 5px;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #bcbcbc;
+  padding: 4px 8px;
+}
