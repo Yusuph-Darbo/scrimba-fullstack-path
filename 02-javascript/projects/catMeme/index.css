@@ -47,7 +47,7 @@ header {
   width: 80px;
 }
 
-.control-container {
+.controls-container {
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -58,7 +58,7 @@ header {
   display: flex;
   flex-direction: column;
   border: 1px solid #bcbcbc;
-  border: 5px;
+  border-radius: 5px;
 }
 
 .radio {

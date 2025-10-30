@@ -1,4 +1,4 @@
-import { catsData } from '/data.js'
+import { catsData } from './data.js'
 
 const emotionRadios = document.getElementById('emotion-radios')
 const getImageBtn = document.getElementById('get-image-btn')
@@ -48,7 +48,7 @@ function getSingleCatObject(){
             return catsArray[0]
         }
         else{
-            return Maths.floor(Maths.random() * catsArray.length)
+            return Math.floor(Math.random() * catsArray.length)
         }
 }
 
