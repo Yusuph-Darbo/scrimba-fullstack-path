@@ -29,7 +29,7 @@ function closeModal()
 }
 
 function renderCat(){
-    const catObject = getSingleObject()
+    const catObject = getSingleCatObject()
     memeModalInner.innerHTML = `
         <img 
         class="cat-img" 
@@ -37,4 +37,47 @@ function renderCat(){
         alt="${catObject.alt}"
         >
         `
+    memeModal.style.display = 'flex'
+}
+
+function getSingleCatObject(){
+    const catsArray = getMatchingCatsArray()
+
+    if (catsArray.length === 1)
+        {
+            return catsArray[0]
+        }
+        else{
+            return Maths.floor(Maths.random() * catsArray.length)
+        }
+}
+
+function getMatchingCatsArray(){     
+    if(document.querySelector('input[type="radio"]:checked')){
+        const selectedEmotion = document.querySelector('input[type="radio"]:checked').value
+        const isGif = gifsOnlyOption.checked
+        
+        const matchingCatsArray = catsData.filter(function(cat){
+            
+            if(isGif){
+                return cat.emotionTags.includes(selectedEmotion) && cat.isGif
+            }
+            else{
+                return cat.emotionTags.includes(selectedEmotion)
+            }            
+        })
+        return matchingCatsArray 
+    }  
+}
+
+function getEmotionsArray(cats){
+    const emotionsArray = []    
+    for (let cat of cats){
+        for (let emotion of cat.emotionTags){
+            if (!emotionsArray.includes(emotion)){
+                emotionsArray.push(emotion)
+            }
+        }
+    }
+    return emotionsArray
 }
