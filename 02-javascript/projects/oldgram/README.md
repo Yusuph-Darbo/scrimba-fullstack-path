@@ -1,23 +1,54 @@
-# 📸 Oldgram
+# Oldgram
 
-A simple Instagram-style feed project built during the Scrimba Fullstack Path.  
-It lets users like posts and view interaction updates using basic JavaScript.
+A minimalist Instagram-style web page showcasing classic artist posts.
 
-## 🧠 What It Does
-- Displays a social media feed with posts and user data.
-- Allows users to "like" posts dynamically.
-- Updates the likes count in real-time on the page.
+🔗 **Live demo:** [https://yusuph-oldgram.netlify.app/](https://yusuph-oldgram.netlify.app/)
 
-## 💻 Built With
-- HTML  
-- CSS  
-- JavaScript (ES6+)
+---
 
-## 🔑 Key JavaScript Methods
-| Method | What It Does |
-|--------|---------------|
-| `forEach()` | Loops through the post data to render each post on the page. |
-| `find()` | Finds the specific post that was liked by matching its ID. |
-| `map()` | Creates new arrays (like a list of post elements) to update the DOM. |
-| `addEventListener()` | Handles click events when users like a post. |
-| `DOM methods` (`querySelector`, `innerHTML`, `textContent`) | Used to render posts and update like counts. |
+## 🖼️ Overview
+
+Oldgram is a simple front-end project inspired by Instagram’s feed layout.
+Each post shows an artist’s name, location, avatar, and image, along with likes and comments.
+Users can move between posts using **forward** and **rewind** buttons that fade when not hovered.
+
+---
+
+## ⚙️ Features
+
+* Static feed with artist info and post image
+* Forward and rewind navigation buttons
+* Hover fade effects on buttons
+* Responsive layout that stays centred
+* Built entirely with HTML, CSS, and vanilla JavaScript
+
+---
+
+## 🧰 Built With
+
+* **HTML5**
+* **CSS3 (Flexbox, transitions)**
+* **JavaScript (ES6)**
+* **Google Fonts – Source Sans 3**
+* **Netlify** for hosting
+
+---
+
+## 📂 Structure
+
+```
+index.html
+index.css
+index.js
+/images/
+```
+
+---
+
+## 🪄 Future Ideas
+
+* Add like button functionality
+* Swipe gestures for mobile
+* Smooth post transition animations
+
+---
