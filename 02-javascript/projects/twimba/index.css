@@ -12,3 +12,25 @@ h1 {
   margin-bottom: 10px;
   font-size: 20px;
 }
+
+i {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* layout */
+main,
+header {
+  width: 290px;
+  margin: 0 auto;
+}
+
+header {
+  padding-bottom: 25px;
+}
+
+.tweet-input-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
