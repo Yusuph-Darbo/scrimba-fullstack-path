@@ -1,6 +1,23 @@
 import { tweetsData } from './data.js'
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid'
 
+document.addEventListener('click', function(event){
+
+    if (event.target.dataset.likeIconClass){
+        handleLikeClicks(event.target.dataset.like)
+    }
+    else if (event.target.retweet){
+        handleRetweetClick(event.target.dataset.retweet)
+    }
+
+    else if (event.target.dataset.reply){
+        handleReplyClick(event.target.dataset.reply)
+    }
+    else if(event.target.id === 'tweet-btn'){
+        handleTweetBtnClick()
+    }
+})
+
 function getFeedHtml(){
     let feedHtml = ''
 
@@ -8,12 +25,15 @@ function getFeedHtml(){
 
         let likeIconClass = ''
 
+        // Checking if the tweet has been liked
         if (tweet.isLiked){
             likeIconClass = 'liked'
         }
 
         let retweetIconclass = ''
 
+        
+        // Chekcing if the tweet has been retweeted
         if (tweet.isRetweeted){
             retweetIconclass = 'retweeted'
         }
