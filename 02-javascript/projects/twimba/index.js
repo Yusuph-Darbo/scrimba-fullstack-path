@@ -1,10 +1,10 @@
 import { tweetsData } from './data.js'
-import { v4 as uuidv4 } from 'https://jspm.dev/uuid'
+import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
 document.addEventListener('click', function(event){
 
     if (event.target.dataset.like){
-        handleLikeClicks(event.target.dataset.like)
+        handleLikeClick(event.target.dataset.like)
     }
     else if (event.target.dataset.retweet){
         handleRetweetClick(event.target.dataset.retweet)
@@ -17,6 +17,21 @@ document.addEventListener('click', function(event){
         handleTweetBtnClick()
     }
 })
+
+function handleLikeClick(){
+    const targetTweetObj = tweetsData.filter(function(tweet){
+        return tweet.uuid === tweetId
+    })[0]
+
+    if (targetTweetObj.isLiked){
+        targetTweetObj.likes--
+    }
+    else{
+        targetTweetObj.likes++
+    }
+    targetTweetObj.isLiked = ! targetTweetObj.isLiked
+    render()
+}
 
 function getFeedHtml(){
     let feedHtml = ''
@@ -33,7 +48,7 @@ function getFeedHtml(){
         let retweetIconclass = ''
 
         
-        // Chekcing if the tweet has been retweeted
+        // Checking if the tweet has been retweeted
         if (tweet.isRetweeted){
             retweetIconclass = 'retweeted'
         }
@@ -100,4 +115,4 @@ function render(){
 }
 
 // Calling the function
-render ()
+render()
