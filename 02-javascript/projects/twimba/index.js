@@ -18,7 +18,7 @@ document.addEventListener('click', function(event){
     }
 })
 
-function handleLikeClick(){
+function handleLikeClick(tweetId){
     const targetTweetObj = tweetsData.filter(function(tweet){
         return tweet.uuid === tweetId
     })[0]
@@ -85,12 +85,12 @@ function getFeedHtml(){
             likeIconClass = 'liked'
         }
 
-        let retweetIconclass = ''
+        let retweetIconClass = ''
 
         
         // Checking if the tweet has been retweeted
         if (tweet.isRetweeted){
-            retweetIconclass = 'retweeted'
+            retweetIconClass = 'retweeted'
         }
 
         let repliesHtml = ''

@@ -94,6 +94,11 @@ button {
   width: 160px;
 }
 
+.tweet-detail {
+  display: flex;
+  gap: 4px;
+}
+
 .tweet-reply {
   border-top: 1px solid lightgray;
   padding: 20px 0 0 0px;
@@ -120,4 +125,8 @@ button {
   border: 1px solid lightgray;
   border-radius: 50%;
   width: 48px;
+}
+
+.hidden {
+  display: none;
 }
