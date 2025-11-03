@@ -3,10 +3,10 @@ import { v4 as uuidv4 } from 'https://jspm.dev/uuid'
 
 document.addEventListener('click', function(event){
 
-    if (event.target.dataset.likeIconClass){
+    if (event.target.dataset.like){
         handleLikeClicks(event.target.dataset.like)
     }
-    else if (event.target.retweet){
+    else if (event.target.dataset.retweet){
         handleRetweetClick(event.target.dataset.retweet)
     }
 
@@ -99,4 +99,5 @@ function render(){
     document.getElementById('feed').innerHTML = getFeedHtml()
 }
 
+// Calling the function
 render ()
