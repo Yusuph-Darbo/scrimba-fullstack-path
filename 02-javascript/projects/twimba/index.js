@@ -18,6 +18,23 @@ function getFeedHtml(){
             retweetIconclass = 'retweeted'
         }
 
+        let repliesHtml = ''
+
+        // Checking if the tweet has a reply
+        if (tweet.replies.length){
+            tweet.replies.forEach(function(reply){
+                repliesHtml += `<div class="tweet-reply">
+    <div class="tweet-inner">
+        <img src="${reply.profilePic}" class="profile-pic">
+            <div>
+                <p class="handle">${reply.handle}</p>
+                <p class="tweet-text">${reply.tweetText}</p>
+            </div>
+        </div>
+</div>`
+            })
+        }
+
         feedHtml += `
 <div class="tweet">
     <div class="tweet-inner">
