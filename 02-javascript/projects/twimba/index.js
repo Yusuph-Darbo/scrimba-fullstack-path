@@ -33,6 +33,21 @@ function handleLikeClick(){
     render()
 }
 
+function handleRetweetClick(tweetId){
+    const targetTweetObj = tweetsData.filter(function(tweet){
+        return tweet.uuid === tweetId
+    })[0]
+    
+    if(targetTweetObj.isRetweeted){
+        targetTweetObj.retweets--
+    }
+    else{
+        targetTweetObj.retweets++
+    }
+    targetTweetObj.isRetweeted = !targetTweetObj.isRetweeted
+    render() 
+}
+
 function getFeedHtml(){
     let feedHtml = ''
 
