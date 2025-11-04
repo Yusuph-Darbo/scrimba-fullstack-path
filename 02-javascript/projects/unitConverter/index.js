@@ -39,7 +39,7 @@ convertBtn.addEventListener("click", function()
                         | ${inputNum} feet = ${(inputNum / meter).toFixed(3)} meters </p>`;
 
     varBox2.innerHTML = `<p class="result-text"> ${inputNum} liters = ${(inputNum / liter).toFixed(2)} gallons 
-                        | ${inputNum} gallons = ${(inputNum * liter).toFixed(3)} liters </p>`;
+                        | ${inputNum} gallons = ${(inputNum / liter).toFixed(3)} liters </p>`;
                     
     varBox3.innerHTML = `<p class="result-text"> ${inputNum} kilos = ${(inputNum * kilo).toFixed(2)} pounds 
                         | ${inputNum} pounds = ${(inputNum / kilo).toFixed(3)} kilos </p>`;
