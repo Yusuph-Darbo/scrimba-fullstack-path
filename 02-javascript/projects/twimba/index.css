@@ -37,6 +37,12 @@ header {
   margin: 0 auto;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 header {
   padding-bottom: 25px;
 }
