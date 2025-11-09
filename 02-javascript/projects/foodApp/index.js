@@ -1,11 +1,26 @@
 import { menuArray } from "./data.js"
 
+let orderArray = []
+
 document.addEventListener('click', function(event){
-    if(e.target.classList.contains('add-btn')){
-        const itemId = parseInt(e.target.dataset.id)
+    // Use closest to handle clicks on button or its children
+    const addButton = event.target.closest('.add-btn')
+    if(addButton){
+        const itemId = parseInt(addButton.dataset.id)
         handleAddItemClick(itemId)
     }
 })
+
+function handleAddItemClick(itemId){
+    const targetMenuItem = menuArray.find(item => item.id === itemId)
+    
+    if(targetMenuItem){
+        orderArray.push(targetMenuItem)
+        console.log('Item added:', targetMenuItem.name)
+        console.log('Current order:', orderArray)
+        // TODO: Render order section when ready
+    }
+}
 
 function getFeedHtml(){
     let menuHtml = ''
