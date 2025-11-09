@@ -9,6 +9,13 @@ document.addEventListener('click', function(event){
         const itemId = parseInt(addButton.dataset.id)
         handleAddItemClick(itemId)
     }
+
+    // Handle remove button clicks
+    const removeButton = event.target.closest('.remove-btn')
+    if(removeButton){
+        const itemId = parseInt(removeButton.dataset.id)
+        handleRemoveItemClick(itemId)
+    }
 })
 
 function handleAddItemClick(itemId){
@@ -16,9 +23,16 @@ function handleAddItemClick(itemId){
     
     if(targetMenuItem){
         orderArray.push(targetMenuItem)
-        console.log('Item added:', targetMenuItem.name)
-        console.log('Current order:', orderArray)
-        // TODO: Render order section when ready
+        renderOrder()
+    }
+}
+
+function handleRemoveItemClick(itemId){
+    // Find the index of the item to remove
+    const itemIndex = orderArray.findIndex(item => item.id === itemId)
+    if(itemIndex > -1){
+        orderArray.splice(itemIndex, 1)
+        renderOrder()
     }
 }
 
@@ -42,8 +56,55 @@ function getFeedHtml(){
     return menuHtml
 }
 
+function getOrderHtml(){
+    if(orderArray.length === 0){
+        return ''
+    }
+    
+    let orderHtml = `
+        <div class="order-header">
+            <h2>Your order</h2>
+        </div>
+        <div class="order-items">
+    `
+    
+    orderArray.forEach((item, index) => {
+        orderHtml += `
+            <div class="order-item">
+                <div class="order-item-info">
+                    <span class="order-item-name">${item.name}</span>
+                    <button class="remove-btn" data-id="${item.id}">remove</button>
+                </div>
+                <span class="order-item-price">$${item.price}</span>
+            </div>
+        `
+    })
+    
+    // Calculate total
+    const total = orderArray.reduce((sum, item) => sum + item.price, 0)
+    
+    orderHtml += `
+        </div>
+        <div class="order-total">
+            <span class="total-label">Total price:</span>
+            <span class="total-price">$${total}</span>
+        </div>
+        <button class="complete-order-btn">Complete order</button>
+    `
+    
+    return orderHtml
+}
+
+function renderOrder(){
+    const orderSection = document.getElementById('order-section')
+    if(orderSection){
+        orderSection.innerHTML = getOrderHtml()
+    }
+}
+
 function render(){
     document.getElementById('feed').innerHTML = getFeedHtml()
+    renderOrder()
 }
 
 render()
