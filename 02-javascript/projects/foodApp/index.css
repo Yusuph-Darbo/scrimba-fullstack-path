@@ -8,6 +8,24 @@ body {
 
 /* Layout */
 
+main,
+header {
+  width: 290px;
+  margin: 0 auto;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  background-image: url(images/burgerBackground.png);
+  background-position: center top;
+  background-size: 100% auto;
+}
+
 .box-container {
   width: 90vw; /* responsive width */
   max-width: 500px; /* caps width on larger screens */
