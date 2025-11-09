@@ -31,18 +31,23 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   text-align: center;
 }
 
-header h1 {
+h1 {
   margin: 0 0 8px 0;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 header p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
+}
+
+h1,
+header p {
+  margin-left: 1.5rem;
 }
 
 .box-container {
