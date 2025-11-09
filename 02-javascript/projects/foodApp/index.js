@@ -1,5 +1,12 @@
 import { menuArray } from "./data.js"
 
+document.addEventListener('click', function(event){
+    if(e.target.classList.contains('add-btn')){
+        const itemId = parseInt(e.target.dataset.id)
+        handleAddItemClick(itemId)
+    }
+})
+
 function getFeedHtml(){
     let menuHtml = ''
     
