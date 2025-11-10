@@ -17,10 +17,16 @@ document.addEventListener('click', function(event){
         handleRemoveItemClick(itemId)
     }
 
+    // Handle complete order click
+    const completeOrderButton = event.target.closest('.complete-order-btn')
+    if(completeOrderButton){
+        renderPay()
+    }
+
     // Handle pay button clicks
     const payButton = event.target.closest('.pay-btn')
     if(payButton){
-        hanldePayItemClick()
+        handlePayItemClick()
     }
 })
 
@@ -42,7 +48,7 @@ function handleRemoveItemClick(itemId){
     }
 }
 
-function hanldePayItemClick(){
+function handlePayItemClick(){
 
 }
 
