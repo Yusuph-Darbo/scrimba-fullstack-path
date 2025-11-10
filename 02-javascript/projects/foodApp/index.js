@@ -16,6 +16,12 @@ document.addEventListener('click', function(event){
         const itemId = parseInt(removeButton.dataset.id)
         handleRemoveItemClick(itemId)
     }
+
+    // Handle pay button clicks
+    const payButton = event.target.closest('.pay-btn')
+    if(payButton){
+        hanldePayItemClick()
+    }
 })
 
 function handleAddItemClick(itemId){
@@ -34,6 +40,10 @@ function handleRemoveItemClick(itemId){
         orderArray.splice(itemIndex, 1)
         renderOrder()
     }
+}
+
+function hanldePayItemClick(){
+
 }
 
 function getFeedHtml(){
