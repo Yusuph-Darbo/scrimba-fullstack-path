@@ -74,7 +74,18 @@ function handlePayItemClick(){
         return
     }
 
-    
+    // Validate card number
+    const cardRegex = /^\d{16}$/
+    if(!cardRegex.test(card)){
+        alert('Card should be 16 digits.')
+        return
+    }
+
+    const cvvRegex = /^\d{3}$/
+    if(!cvvRegex.test(cvv)){
+        alert('CVV should be 3 digits.')
+        return
+    }
 
     // Reset order and show confirmation
     orderArray = []
