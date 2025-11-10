@@ -61,9 +61,20 @@ function handlePayItemClick(){
     const card = cardInput.value.trim()
     const cvv = cvvInput.value.trim()
 
+    // Basic empty check
     if(!name || !card || !cvv){
+        alert('Please fill in all fields.')
         return
     }
+
+    // Validate name (chars and spaces only)
+    const nameRegex = /^[A-Za-z\s]+$/
+    if(!nameRegex.test(name)){
+        alert('Name should contain only letters.')
+        return
+    }
+
+    
 
     // Reset order and show confirmation
     orderArray = []
