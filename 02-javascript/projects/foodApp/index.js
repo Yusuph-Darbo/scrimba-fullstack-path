@@ -49,7 +49,39 @@ function handleRemoveItemClick(itemId){
 }
 
 function handlePayItemClick(){
+    const nameInput = document.getElementById('customer-name')
+    const cardInput = document.getElementById('card-number')
+    const cvvInput = document.getElementById('cvv')
 
+    if(!nameInput || !cardInput || !cvvInput){
+        return
+    }
+
+    const name = nameInput.value.trim()
+    const card = cardInput.value.trim()
+    const cvv = cvvInput.value.trim()
+
+    if(!name || !card || !cvv){
+        return
+    }
+
+    // Reset order and show confirmation
+    orderArray = []
+    renderOrder()
+
+    const orderSection = document.getElementById('order-section')
+    if(orderSection){
+        orderSection.innerHTML = `
+            <div class="order-confirmation">
+                <p>Thanks, ${name}! Your order is on its way!</p>
+            </div>
+        `
+    }
+
+    const paySection = document.getElementById('pay-section')
+    if(paySection){
+        paySection.innerHTML = ''
+    }
 }
 
 function getFeedHtml(){
@@ -116,6 +148,47 @@ function renderOrder(){
     if(orderSection){
         orderSection.innerHTML = getOrderHtml()
     }
+}
+
+function renderPay(){
+    const paySection = document.getElementById('pay-section')
+    if(paySection){
+        paySection.innerHTML = getPayHtml()
+    }
+}
+
+function getPayHtml(){
+    return `
+        <div class="pay-container">
+            <h2>Enter card details</h2>
+            <div class="pay-form">
+                <input 
+                    type="text" 
+                    id="customer-name" 
+                    name="name" 
+                    placeholder="Enter your name" 
+                    required
+                />
+                <input 
+                    type="text" 
+                    id="card-number" 
+                    name="cardNumber" 
+                    placeholder="Enter card number" 
+                    inputmode="numeric"
+                    required
+                />
+                <input 
+                    type="text" 
+                    id="cvv" 
+                    name="cvv" 
+                    placeholder="Enter CVV" 
+                    inputmode="numeric"
+                    required
+                />
+                <button class="pay-btn">Pay</button>
+            </div>
+        </div>
+    `
 }
 
 function render(){
