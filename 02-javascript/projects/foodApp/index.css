@@ -220,3 +220,16 @@ main {
 .complete-order-btn:hover {
   background-color: #14c988;
 }
+
+.pay-section {
+  display: flex;
+  position: absolute;
+}
+
+.pay-container {
+  background-color: gray;
+  height: 300px;
+  width: 500px;
+  text-align: center;
+  margin: auto;
+}
