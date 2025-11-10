@@ -221,9 +221,79 @@ main {
   background-color: #14c988;
 }
 
+/* Pay Overlay */
+.pay-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  padding: 20px;
+}
+
+.pay-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.pay-container h2 {
+  margin: 0 0 16px 0;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.pay-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pay-form input {
+  padding: 12px;
+  border: 1px solid #d3d3d3;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.pay-btn {
+  margin-top: 6px;
+  padding: 12px;
+  background-color: #16db99;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pay-btn:hover {
+  background-color: #14c988;
+}
+
+.order-confirmation {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  padding: 14px;
+  border-radius: 6px;
+  text-align: center;
+}
+
 .pay-section {
   display: flex;
-  position: absolute;
+  position: fixed;
+  width: 524px;
+  height: 542px;
+  top: 0;
+  right: 0;
 }
 
 .pay-container {

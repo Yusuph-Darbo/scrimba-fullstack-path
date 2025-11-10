@@ -81,6 +81,7 @@ function handlePayItemClick(){
     const paySection = document.getElementById('pay-section')
     if(paySection){
         paySection.innerHTML = ''
+        paySection.classList.remove('pay-overlay')
     }
 }
 
@@ -153,6 +154,7 @@ function renderOrder(){
 function renderPay(){
     const paySection = document.getElementById('pay-section')
     if(paySection){
+        paySection.classList.add('pay-overlay')
         paySection.innerHTML = getPayHtml()
     }
 }
