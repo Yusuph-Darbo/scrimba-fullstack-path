@@ -1,0 +1,19 @@
+body {
+  background-color: white;
+  font-family: "TikTok Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222831;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxContainer {
+  width: 90vw; /* responsive width */
+  max-width: 500px; /* caps width on larger screens */
+  height: 90vh;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
