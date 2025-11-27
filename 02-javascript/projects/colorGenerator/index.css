@@ -19,9 +19,17 @@ body {
 }
 
 .header {
-  background-color: gray;
+  background-color: white;
   display: flex;
   align-items: center;
+  height: 80px;
+  box-shadow: 1px 1px 5px #888888;
+}
+
+.colourPicker {
+  height: 42px;
+  margin-left: 15px;
+  border: none;
 }
 
 button {
@@ -30,5 +38,17 @@ button {
   background-color: white;
   border: 1px solid #d1d5db;
   border-radius: 3px;
-  margin-left: 230px;
+  margin: 0 10px;
+}
+
+#colours {
+  margin-left: 15px;
+  width: 300px;
+  height: 42px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+}
+
+.colourDisplay {
+  display: grid;
 }
