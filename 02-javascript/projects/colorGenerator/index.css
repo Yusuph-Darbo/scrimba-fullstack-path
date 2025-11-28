@@ -56,3 +56,8 @@ button {
   height: 530px;
   gap: 0;
 }
+
+.colourText {
+  font-size: 0.95rem;
+  text-align: center;
+}

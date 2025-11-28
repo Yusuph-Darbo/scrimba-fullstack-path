@@ -4,6 +4,7 @@ const colourDisplay = document.querySelector('.colourDisplay')
 const colourPicker = document.getElementById('colour')
 // Controls the options e.g. monochrome
 const colourType = document.getElementById('colours')
+const colourText = document.getElementById('colourText')
 const btn = document.getElementById('btn')
 
 btn.addEventListener('click', async function() {
@@ -42,11 +43,15 @@ async function loadDefaultColours() {
 
 function updateColours(colours) {
     colourDisplay.innerHTML = "" // clear old colours
+    colourText.innerHTML = ""
 
     colours.forEach(c => {
         const div = document.createElement('div')
+        const p = document.createElement('p')
         div.style.backgroundColor = c.hex.value
         div.classList.add('colourBox')
-        colourDisplay.appendChild(div)
+        colourDisplay.appendChild(div)    
+        p.textContent = c.hex.value
+        colourText.appendChild(p)
     })
 }
