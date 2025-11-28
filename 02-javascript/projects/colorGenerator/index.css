@@ -49,9 +49,10 @@ button {
   border-radius: 5px;
 }
 
-.colourDisplay {
+.colourDisplay,
+.colourText {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  height: calc(90vh - 80px);
+  height: 530px;
   gap: 0;
 }

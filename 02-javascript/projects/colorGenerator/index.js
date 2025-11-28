@@ -23,6 +23,23 @@ btn.addEventListener('click', async function() {
     updateColours(data.colors)
 })
 
+window.addEventListener('DOMContentLoaded', () => {
+    loadDefaultColours()
+})
+
+async function loadDefaultColours() {
+    const defaultHex = "000000"
+    const defaultMode = "monochrome"
+
+    const res = await fetch(
+        `https://www.thecolorapi.com/scheme?hex=${defaultHex}&mode=${defaultMode}&count=6`
+    )
+    
+    const data = await res.json()
+
+    updateColours(data.colors)
+}
+
 function updateColours(colours) {
     colourDisplay.innerHTML = "" // clear old colours
 
