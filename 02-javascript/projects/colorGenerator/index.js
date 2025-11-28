@@ -22,3 +22,14 @@ btn.addEventListener('click', async function() {
     // Update the display
     updateColours(data.colors)
 })
+
+function updateColours(colours) {
+    colourDisplay.innerHTML = "" // clear old colours
+
+    colours.forEach(c => {
+        const div = document.createElement('div')
+        div.style.backgroundColor = c.hex.value
+        div.classList.add('colourBox')
+        colourDisplay.appendChild(div)
+    })
+}
