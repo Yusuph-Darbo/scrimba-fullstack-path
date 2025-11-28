@@ -57,17 +57,14 @@ function updateColours(colours) {
         // Copy to clipboard on click
         div.addEventListener('click', () => {
             navigator.clipboard.writeText(c.hex.value)
-            div.classList.add('copied')
-
-            setTimeout(() => div.classList.remove('copied'), 500)
+            alert("Copied the text: " + c.hex.value)
         })
         
         // Copy to clipboard for text
         p.addEventListener('click', () => {
             navigator.clipboard.writeText(c.hex.value)
-            p.classList.add('copied')
-
-            setTimeout(() => p.classList.remove('copied'), 500)
+            alert("Copied the colour: " + c.hex.value)
         })
+
     })
 }

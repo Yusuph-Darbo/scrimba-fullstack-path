@@ -61,3 +61,11 @@ button {
   font-size: 0.95rem;
   text-align: center;
 }
+
+.colourBox,
+.colourText p {
+  cursor: pointer;
+}
+
+.copied {
+}
