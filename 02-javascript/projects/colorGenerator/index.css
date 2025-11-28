@@ -51,4 +51,7 @@ button {
 
 .colourDisplay {
   display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  height: calc(90vh - 80px);
+  gap: 0;
 }

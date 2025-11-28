@@ -16,7 +16,7 @@
     <div class="boxContainer">
       <div class="header">
         <form>
-          <input class="colourPicker" type="color" />
+          <input class="colourPicker" id="colour" type="color" />
         </form>
 
         <select name="colours" id="colours">
@@ -30,7 +30,10 @@
         </select>
         <button>Get colour scheme</button>
       </div>
-      <div class="colourDisplay"></div>
+      <div class="colourDisplay">
+        <!-- Rendered in js -->
+      </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
