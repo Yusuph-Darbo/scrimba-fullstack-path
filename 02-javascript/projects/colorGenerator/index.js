@@ -53,5 +53,21 @@ function updateColours(colours) {
         colourDisplay.appendChild(div)    
         p.textContent = c.hex.value
         colourText.appendChild(p)
+
+        // Copy to clipboard on click
+        div.addEventListener('click', () => {
+            navigator.clipboard.writeText(c.hex.value)
+            div.classList.add('copied')
+
+            setTimeout(() => div.classList.remove('copied'), 500)
+        })
+        
+        // Copy to clipboard for text
+        p.addEventListener('click', () => {
+            navigator.clipboard.writeText(c.hex.value)
+            p.classList.add('copied')
+
+            setTimeout(() => p.classList.remove('copied'), 500)
+        })
     })
 }
