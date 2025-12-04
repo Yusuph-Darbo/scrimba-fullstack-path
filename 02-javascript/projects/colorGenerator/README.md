@@ -2,6 +2,8 @@
 
 A simple and interactive color palette generator built as part of the Scrimba Fullstack Path. This project allows users to choose a base color and generate a variety of color schemes using **The Color API**.
 
+👉 **Live Website:** [https://yusuph-colourGenerator.netlify.app/](https://yusuph-colourgenerator.netlify.app/)
+
 ## Features
 
 * Choose any base color using a color picker
