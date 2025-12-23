@@ -1,4 +1,32 @@
-:root {
-  background-color: #1c1c1c;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #202020;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
   color: white;
+}
+
+#root {
+  background-color: #23252c;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.logo {
+  width: 317px;
 }
