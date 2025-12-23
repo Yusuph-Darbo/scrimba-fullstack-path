@@ -2,9 +2,8 @@ export default function About (){
     return (
         <>
         <h2>About</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Blanditiis cum perspiciatis itaque, asperiores laboriosam
-             saepe quae nam ducimus illo tempora expedita</p>
+        <p>A CS student at Technological University Dublin (TUD), currently learning React, Express and API development.
+            Having fun building backend, frontend and full-stack projects, can't wait for my next project! </p>
         </>
     )
 }

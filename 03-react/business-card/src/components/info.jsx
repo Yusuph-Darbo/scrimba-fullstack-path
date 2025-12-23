@@ -16,7 +16,7 @@ export default function Info(){
                 </button>
                 <button className='blue-btn'>
                     <FontAwesomeIcon icon={faLinkedin} />
-                    Email
+                    Linkedin
                 </button>
             </div>
         </>
