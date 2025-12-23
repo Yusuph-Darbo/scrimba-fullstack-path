@@ -1,16 +1,35 @@
-# React + Vite
+# React Business Card
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **digital business card** React app.
 
-Currently, two official plugins are available:
+🔗 **Live demo:** [https://yusuph-business-card.netlify.app/](https://yusuph-business-card.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Project Overview
 
-## React Compiler
+This project is a beginner-friendly React application that displays a personal/business card layout. It demonstrates basic React concepts such as:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Component structure
+* JSX
+* Props and styling
+* Importing and rendering images
+* Using external libraries (e.g., Font Awesome icons)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+
+✅ Displays your photo or logo
+✅ Shows your name and title/description
+✅ Interactive buttons (e.g., Email, LinkedIn)
+✅ Social media icons in the footer
+
+---
+
+## 🛠️ Built With
+
+| Technology                  | Purpose                    |
+| --------------------------- | -------------------------- |
+| **React**                   | UI building library        |
+| **Vite / Create React App** | Project setup & bundling   |
+| **Font Awesome**            | Icons (email/social icons) |
+| **CSS**                     | Styling                    |
